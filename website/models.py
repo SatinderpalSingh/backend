@@ -1,6 +1,7 @@
 from django.db import models
-
+import reversion
 # Create your models here.
+@reversion.register()
 class mission(models.Model):
     Mission = models.TextField(max_length = 2000)
 
