@@ -1,10 +1,11 @@
 from django.contrib import admin
 from reversion.admin  import VersionAdmin
 # Register your models here.
-from .models import mission, vision
+from .models import *
 
 #admin.site.register(mission)
 admin.site.register(vision)
+admin.site.register(goal)
 
 class Adminmission(VersionAdmin):
       recover_form_template='reversion/recover_form.html'
