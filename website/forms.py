@@ -15,3 +15,6 @@ class VisionForm(forms.ModelForm):
         model = vision
 
         fields = ('Vision',)
+
+
+
