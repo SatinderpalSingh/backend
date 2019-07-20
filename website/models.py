@@ -13,3 +13,10 @@ class vision(models.Model):
 
     def __str__(self):
         return self.Vision
+
+class history(models.Model):
+    History = models.TextField(max_length = 2000)
+
+class principal_desk(models.Model):
+    principal_img = models.ImageField(upload_to='images/')
+    principal_message = models.TextField(max_length = 2000)
