@@ -13,3 +13,12 @@ class vision(models.Model):
 
     def __str__(self):
         return self.Vision
+
+class branchInCourse(models.Model):
+    branch =models.CharField(max_length = 50)
+    intake = models.IntegerField()
+    course_id = models.IntegerField()
+
+class course_Type_table(models.Model):
+    course_type = models.CharField(max_length= 50)
+    type_id = models.IntegerField()
