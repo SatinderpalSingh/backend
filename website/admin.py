@@ -11,4 +11,4 @@ class Adminmission(VersionAdmin):
 
 admin.site.register(mission,Adminmission)
 admin.site.register(history)
-admin.site.register(principal_desk)
+admin.site.register(principal_desk,adm_files,adm_file_types)
