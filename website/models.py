@@ -26,7 +26,7 @@ this class provide branchs in each course
 class branchInCourse(models.Model):
     branch =models.CharField(max_length = 50)
     intake = models.IntegerField()
-    course_id = models.ForeignKey(course_Type_table,on_delete=models.CASCADE)
+    course_id = models.IntergerField()
 """
 this class gives name and designation of officer and staff in Academics
 """
