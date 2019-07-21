@@ -46,24 +46,8 @@ class branchInCourse(models.Model):
     branch =models.CharField(max_length = 50)
     intake = models.IntegerField()
     course_id = models.ForeignKey(course_Type_table,on_delete=models.CASCADE)
-"""
-this class gives name and designation of officer and staff in Academics
-"""
-class Academics_OfficersAndStaff(models.Model)
-    name=models.CharField(max_length = 50)
-    degsignation=models.CharField(max_length= 50)
 
-"""
-this class give academics regulation files
-"""
-class Academics_Regulations(models.Model)
-    AttachmentName = models.CharField(max_length=50)
-    Attachment = models.FileField('Upload File',upload_to = '') #path to file folder will be added
-
-
-#Ph.d student under QIP will be added to other files
-
-#this class give child in academics nav
+#this class give elements  in academics nav
 
 class Academics(models.Model)
     element_Name=models.CharField(max_length=50)
@@ -114,5 +98,38 @@ class Roll_of_Honour(models.Model)
     fileName = models.CharField(max_length = 50)
     file_ROH =models.FileField('Upload File',upload_to = '') #path to file folder will be added
 
+
+"""
+below are classes for faculty nav
+"""
+"""
+this class give description of cultural committee
+"""
+class Cultural_Committee(models.Model)
+    description =models.TextField()
+"""
+this class give achievements of cultural committee
+"""
+class Cultural_Committee_Achivements(models.Model)
+    achievements = models.CharField()
+
+
+"""
+below are classes for Quality work nav
+"""
+"""
+this class give elements under Quality work
+"""
+class QualityWork_elements(models.Model)
+    element_name= models.CharField()
+    element_id=models.IntegerField()
+
+"""
+this class give file of elements of quality work
+"""
+class QW_elements_files(models.Model)
+   nameOfFile=models.CharField()
+   elements_file=models.FileField('Upload File',upload_to = '') #path to file folder will be added
+   element_id =models.ForeignKey(QualityWork_elements,on_delete=models.CASCADE)
 
            
