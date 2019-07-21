@@ -49,13 +49,13 @@ class branchInCourse(models.Model):
 
 #this class give elements  in academics nav
 
-class Academics(models.Model)
+class Academics(models.Model):
     element_Name=models.CharField(max_length=50)
     element_id=models.IntegerField()
 
 #this class give types of file under a elements of Academics
 
-class Academics_elements_FileTypes(models.Model)
+class Academics_elements_FileTypes(models.Model):
     element_id=models.ForeignKey(Academics,on_delete=models.CASCADE)
     element_fileTypeName=models.CharField(max_length= 50)
     FileTypeId = models.IntegerField()
@@ -66,7 +66,7 @@ class Academics_elements_FileTypes(models.Model)
     
   
 """
-class Academics_files(models.Model)
+class Academics_files(models.Model):
     FileName =models.CharField(max_length = 50)
     File = models.FileField('Upload File',upload_to = '') #path to file folder will be added
     FileTypeid = models.ForeignKey(Academics_elements_FileTypes,on_delete=models.CASCADE)
@@ -79,22 +79,22 @@ below are classes for Examination nav
 """
 this classes give detail of coe office 
 """
-class Members_of_Examination_Branch(models.Model)
+class Members_of_Examination_Branch(models.Model):
     Committee_members=models.CharField(max_length = 50)
     designation=models.CharField(max_length = 50)
 
-class Software_Automation_Committee(models.Model)
+class Software_Automation_Committee(models.Model):
     Committee_members=models.CharField(max_length = 50)
     designation=models.CharField(max_length = 50)
 
-class Supporting_Staff(models.Model)
+class Supporting_Staff(models.Model):
     Committee_members=models.CharField(max_length = 50)
     designation=models.CharField(max_length = 50)
 
 """
 this class give files of Roll of honer under EXAMINATION nav
 """
-class Roll_of_Honour(models.Model)
+class Roll_of_Honour(models.Model):
     fileName = models.CharField(max_length = 50)
     file_ROH =models.FileField('Upload File',upload_to = '') #path to file folder will be added
 
@@ -105,13 +105,13 @@ below are classes for faculty nav
 """
 this class give description of cultural committee
 """
-class Cultural_Committee(models.Model)
+class Cultural_Committee(models.Model):
     description =models.TextField()
 """
 this class give achievements of cultural committee
 """
-class Cultural_Committee_Achivements(models.Model)
-    achievements = models.CharField()
+class Cultural_Committee_Achivements(models.Model):
+    achievements = models.CharField(max_length=200)
 
 
 """
@@ -120,15 +120,15 @@ below are classes for Quality work nav
 """
 this class give elements under Quality work
 """
-class QualityWork_elements(models.Model)
-    element_name= models.CharField()
+class QualityWork_elements(models.Model):
+    element_name= models.CharField(max_length=100)
     element_id=models.IntegerField()
 
 """
 this class give file of elements of quality work
 """
-class QW_elements_files(models.Model)
-   nameOfFile=models.CharField()
+class QW_elements_files(models.Model):
+   nameOfFile=models.CharField(max_length=200)
    elements_file=models.FileField('Upload File',upload_to = '') #path to file folder will be added
    element_id =models.ForeignKey(QualityWork_elements,on_delete=models.CASCADE)
 
