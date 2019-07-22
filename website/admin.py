@@ -5,6 +5,7 @@ from .models import *
 
 #admin.site.register(mission)
 admin.site.register(vision)
+admin.site.register(goal)
 
 class Adminmission(VersionAdmin):
       recover_form_template='reversion/recover_form.html'
