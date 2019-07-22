@@ -11,3 +11,5 @@ class Adminmission(VersionAdmin):
       recover_form_template='reversion/recover_form.html'
 
 admin.site.register(mission,Adminmission)
+admin.site.register(Balance_Sheet)
+admin.site.register(Finance_Committe)
