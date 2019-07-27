@@ -1,0 +1,21 @@
+{% extends 'front_end_view.html' %}
+
+{% block title %}  {% endblock %}
+
+{% block heading %} <center><h1><font size ="25px">Balance Sheets</font></h1></center> {% endblock %}
+
+{% block content %} 
+
+<br>
+
+
+<font size = 6px color="white">
+{% for object in obj %}
+<a href="{{ object.Files.url }}">
+<center>{{ object.Name }}</center>
+</ol>
+</a>
+
+{% endfor %}
+
+{% endblock %}

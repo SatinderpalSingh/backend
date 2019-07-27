@@ -1,0 +1,20 @@
+{% extends 'front_end_view.html' %}
+
+{% block head %} Principal's Desk {% endblock %}
+
+{% block heading %} <center><h1>Principal's Desk</h1></center> {% endblock %}
+
+{% block content %} 
+
+<center>
+	<div class = "img">
+	<img src = "{{ obj.principal_img.url }}" width="15%" height="34%"  >  <br>
+	</div>
+	<font size = "5px" >
+	{{ obj.principal_name }} <br><br>
+<font size = "6px" style="overflow-wrap: break-word;">
+<pre>
+{{ obj.principal_message }}
+</pre>
+</center>
+{% endblock %}

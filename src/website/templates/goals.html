@@ -1,0 +1,19 @@
+{% extends 'front_end_view.html' %}
+
+{% block title %} Goals {% endblock %}
+
+{% block heading %} <center><h1><font size ="25px">Goals</font></h1></center> {% endblock %}
+
+{% block content %} 
+
+<br>
+
+<pre>
+<font size = 6px>
+<h2>Long Term Goals</h2>
+{{ obj.long_term_goals }}
+
+<br>
+<h2>Short Term Goals</h2>
+{{ obj.short_term_goals }}
+{% endblock %}

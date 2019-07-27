@@ -1,0 +1,49 @@
+{% extends 'front_end_view.html' %}
+
+{% block title %} Finance Committee {% endblock %}
+
+{% block heading %} <center><h1><font size ="25px">Finance Committe</font></h1></center> {% endblock %}
+
+{% block content %} 
+<h1>
+<br>
+
+<style>
+td{
+border: 1px solid white;
+}
+
+th{
+border: 1px solid white;
+}
+
+</style>
+
+<center>
+<font face = "ALGERIAN" size = 7>
+<table bordercolor="White" style = "color: White; border: 10px solid white;">
+<tbody style="font-size: 50px">
+ <tr style = "color: White; border: 10px solid white;">
+  <th>Sno</th>
+  <th>Name</th>
+  <th>Details</th>
+  <th>Designation</th>
+ </tr>
+
+{% for object in obj %}
+ <tr  style = "color: White; border: 10px solid white;">
+  <td> {{ object.id }} </td>
+  <td> {{ object.Name}} </td>
+  <td> {{ object.Details }} </td>
+  <td> {{ object.Designation }} </td>
+ </tr>
+{% endfor %}
+</tbody>
+</table>
+
+</center>
+</h1>
+{% endblock %}
+
+
+
