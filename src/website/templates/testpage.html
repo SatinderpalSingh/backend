@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<title>GNDEC Home</title>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+{% load staticfiles %}
+
+<!-- <link href="{% static "styles.css" %}" rel="stylesheet" type="text/css"> -->
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect*/ 
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  position: relative;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  max-width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content 
+{
+  display: block;
+  width: 195px;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('http://www.punjabspider.com/attachments/Resources/2804-20840-Guru-Nanak-Dev-Engineering-College.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("https://www.gndec.ac.in/gndec/a2.JPG");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("https://gndec.ac.in/gndec/nptel.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+ul {
+       list-style: none;
+        padding: 0;
+        margin: 0;
+        background: #000000;
+      }
+      
+ul li {
+        display: block;
+        position: relative;
+        float: left;
+        background: #000000;
+	}
+
+li ul { display: none; }
+       
+
+ul li a {
+       display: block;
+       padding: 1em;
+       text-decoration: none;
+       white-space: nowrap;
+       color: #fff;
+}
+
+ul li a:hover { background: #2c3e50; }
+li:hover > ul {
+        display: block;
+        position: absolute;
+
+      }
+
+       
+
+li:hover li { float: none; }
+    
+
+li:hover a { background: #2c3e50; }
+      
+
+li:hover li a:hover { background: #2c3e50; }
+
+       
+
+.main-navigation li ul li { border-top: 0; }
+
+ul ul ul {
+	  left: 100%;
+	  top: 0;
+	}
+
+ul:before,
+
+ul:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+      }
+       
+
+ul:after { clear: both; }
+
+
+</style>
+<body bgcolor="black">
+ 
+<ul class="main-navigation">
+
+        <li><a href="#">About US</a>
+
+          <ul>
+            <li><a href="#">Principal Desk</a></li>
+            <li><a href="#">Administration</a>
+            <li><a href="#">Mission</a>
+            <li><a href="#">Vision</a>
+            <li><a href="#">Goals</a>
+            <li><a href="#">History</a>
+            <li><a href="#">Campus</a>
+            <li><a href="#">Balance Sheets</a>
+            <li><a href="#">Mandatory Disclosures</a>
+	</ul>
+
+	<li><a href="#">Governence</a>
+              <ul>
+
+                <li><a href="#">Resets</a></li>
+
+                <li><a href="#">Grids</a></li>
+
+                <li><a href="#">Frameworks</a></li>
+
+              </ul>
+
+            </li>
+
+            <li><a href="#">JavaScript</a>
+
+              <ul>
+
+                <li><a href="#">Ajax</a></li>
+
+                <li><a href="#">jQuery</a></li>
+
+              </ul>
+
+            </li>
+
+
+
+        </li>
+
+        <li><a href="#">WordPress Development</a>
+
+          <ul>
+
+            <li><a href="#">Themes</a></li>
+
+            <li><a href="#">Plugins</a></li>
+
+            <li><a href="#">Custom Post Types</a>
+
+              <ul>
+
+                <li><a href="#">Portfolios</a></li>
+
+                <li><a href="#">Testimonials</a></li>
+
+              </ul>
+
+            </li>
+
+            <li><a href="#">Options</a></li>
+
+          </ul>
+
+        </li>
+
+        <li><a href="#">About Us</a></li>
+
+	</ul>
+<!--
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a> -->
+  </div>
+</div>
+
+
+
+</body>
+</html>
+

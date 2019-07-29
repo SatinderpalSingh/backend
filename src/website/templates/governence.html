@@ -1,0 +1,35 @@
+{% extends 'front_end_view.html' %}
+
+{% block title %}  {% endblock %}
+
+{% block heading %} <center><h1><font size ="25px">
+
+{% for object in obj %}
+	{% if object.type_id == 1 %}
+		Board of Governors' Meetings
+	{% elif object.type_id == 2 %}
+		Academic Council Agenda & Proceedings
+	{% elif object.type_id == 4 %}
+		BOS
+	{% elif object.type_id == 5 %}
+		Non Statutory
+	{% endif %}
+{% endfor %}
+
+ </font></h1></center> {% endblock %}
+
+{% block content %} 
+
+<br>
+
+
+<font size = 6px color="white">
+{% for object in obj %}
+<a href="{{ object.files.url }}">
+<center>{{ object.Name_of_file }}</center>
+</ol>
+</a>
+
+{% endfor %}
+
+{% endblock %}
